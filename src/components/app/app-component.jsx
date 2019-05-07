@@ -11,7 +11,7 @@ const AppComponent = ({ page, changePage }) => {
   const showResume = page === 'resume'
   return (
     <div className="app-container">
-      <Header page={page} changePage={changePage} />
+      <Header changePage={changePage} page={page} />
       {showExamples && <Examples />}
       {showHome && <Home />}
       {showResume && <Resume />}
