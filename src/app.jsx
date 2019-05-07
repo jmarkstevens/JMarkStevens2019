@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-const title = 'My Minimal Babel Webpack Setup'
+import './app.scss'
+import AppComponent from './components/app'
 
-ReactDOM.render(<div>{title}</div>, document.getElementById('react-app'))
+ReactDOM.render(<AppComponent />, document.getElementById('react-app'))
