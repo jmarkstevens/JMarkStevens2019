@@ -1,7 +1,22 @@
 import React from 'react'
 
-const AppComponent = () => {
-  return <div className="app-container">AppComponent</div>
+import Examples from '../examples'
+import Header from '../header'
+import Home from '../home'
+import Resume from '../resume'
+
+const AppComponent = ({ page, changePage }) => {
+  const showExamples = page === 'examples'
+  const showHome = page === 'home'
+  const showResume = page === 'resume'
+  return (
+    <div className="app-container">
+      <Header page={page} changePage={changePage} />
+      {showExamples && <Examples />}
+      {showHome && <Home />}
+      {showResume && <Resume />}
+    </div>
+  )
 }
 
 export default AppComponent
