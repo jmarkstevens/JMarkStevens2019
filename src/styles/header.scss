@@ -8,22 +8,23 @@
 }
 
 .contact-links {
-  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   height: 3.2em;
+  padding: 0.35em 1em;
   text-align: right;
   vertical-align: middle;
+  width: 250px;
 }
 
 .contact-links-link {
-  height: 3.2em;
   vertical-align: middle;
 }
 
 .contact-icon {
   color: $button-color !important;
   font-size: 1.8em !important;
-  margin-right: 1em;
-  margin-top: 0.35em;
 }
 
 .examples-control {
@@ -32,6 +33,18 @@
 }
 
 .page-buttons {
-  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.8em;
+  justify-content: space-between;
   text-align: left;
+  width: 250px;
+}
+
+.page-buttons-button {
+  color: $foreground-color !important;
+}
+
+.page-buttons-button-selected {
+  color: $disabled-color !important;
 }
