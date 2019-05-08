@@ -1,8 +1,11 @@
 import Button from '@material-ui/core/Button'
 import classNames from 'classnames'
-import React from 'react'
+import React, { useContext } from 'react'
 
-const PageButtons = ({ changePage, page }) => {
+import { PageContext } from '../../../containers/app'
+
+const PageButtons = () => {
+  const { changePage, page } = useContext(PageContext)
   const showExamples = page === 'examples'
   const showHome = page === 'home'
   const showResume = page === 'resume'

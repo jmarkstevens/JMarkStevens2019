@@ -4,11 +4,11 @@ import ContactLinks from './contact-links'
 import ExamplesControl from './examples-control'
 import PageButtons from './page-buttons'
 
-const Header = ({ changePage, page }) => {
+const Header = () => {
   return (
     <div className="header-container">
-      <PageButtons changePage={changePage} page={page} />
-      <ExamplesControl page={page} />
+      <PageButtons />
+      <ExamplesControl />
       <ContactLinks />
     </div>
   )

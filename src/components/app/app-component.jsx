@@ -5,13 +5,13 @@ import Header from '../header'
 import Home from '../home'
 import Resume from '../resume'
 
-const AppComponent = ({ page, changePage }) => {
+const AppComponent = ({ page }) => {
   const showExamples = page === 'examples'
   const showHome = page === 'home'
   const showResume = page === 'resume'
   return (
     <div className="app-container">
-      <Header changePage={changePage} page={page} />
+      <Header />
       {showExamples && <Examples />}
       {showHome && <Home />}
       {showResume && <Resume />}

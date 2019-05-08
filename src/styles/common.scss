@@ -3,10 +3,35 @@
   font-size: 1.8em !important;
 }
 
+.common-button {
+  color: $foreground-color !important;
+}
+
 .common-icon-button {
   color: $button-color !important;
 }
 
 .common-icon-button:disabled {
   color: $disabled-color !important;
+}
+
+.page-indicator {
+  padding: 0;
+  text-align: center;
+}
+
+.page-indicator-dot {
+  background-color: #fff;
+  border-radius: 100%;
+  cursor: pointer;
+  display: inline-block;
+  height: 9;
+  margin: 7;
+  padding: 0;
+  vertical-align: middle;
+  width: 9;
+}
+
+.page-indicator-dot-active {
+  background-color: #b4dbc0;
 }
