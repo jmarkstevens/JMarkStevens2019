@@ -2,10 +2,6 @@ import classNames from 'classnames'
 import React from 'react'
 
 const PageIndicator = ({ activeIndex, count, onClick }) => {
-  const handleDotClick = e => {
-    if (onClick) onClick(parseInt(e.target.id, 10))
-  }
-
   const renderDots = () => {
     const dots = []
 
@@ -18,8 +14,8 @@ const PageIndicator = ({ activeIndex, count, onClick }) => {
           className={DotClass}
           key={`dot${i}`}
           id={i}
-          onClick={handleDotClick}
-          onKeyPress={handleDotClick}
+          onClick={() => onClick(i)}
+          onKeyPress={() => onClick(i)}
           role="button"
           tabIndex={0}
         />
