@@ -1,6 +1,1 @@
-export {
-  default,
-  ExamplePageContext,
-  NoteContext,
-  PageContext
-} from './app-container'
+export { default, AppContext } from './app-container'
