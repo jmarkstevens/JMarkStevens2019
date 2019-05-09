@@ -1,0 +1,26 @@
+.example-container {
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.example-note-pop {
+  background: rgba(28, 34, 24, 0.6);
+  color: #e4eae0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.3vmax;
+  left: 50%;
+  margin: 0 auto;
+  padding: 30px;
+  position: absolute;
+  text-align: center;
+  top: 66%;
+  transform: translate(-50%, -50%);
+}
+
+.example-iframe {
+  overflow: hidden;
+  width: 100%;
+}

@@ -1,7 +1,36 @@
-import React from 'react'
+import React, { useContext } from 'react'
+
+import { AppContext } from '../../containers/app'
+import Notes from './notes'
+
+const useTest = false
+const testOrNot = useTest ? 'test.' : ''
+const urls = [
+  'index placeholder',
+  `http://${testOrNot}bergstromgardens.org`,
+  `http://${testOrNot}codeviewer.calitek.com`,
+  `http://${testOrNot}palminfo.org`
+]
+
+const innerHeight = window.innerHeight * 0.968
+const iFrameSty = { height: innerHeight }
 
 const Examples = () => {
-  return <div className="example-container">Examples</div>
+  const { examplePage, showPop } = useContext(AppContext)
+  const noteText = Notes[examplePage]
+  const urlSrc = urls[examplePage]
+  return (
+    <div className="example-container">
+      <iframe
+        className="example-iframe"
+        id="iFrame"
+        src={urlSrc}
+        style={iFrameSty}
+        title="Example"
+      />
+      {showPop && <div className="example-note-pop">{noteText}</div>}
+    </div>
+  )
 }
 
 export default Examples

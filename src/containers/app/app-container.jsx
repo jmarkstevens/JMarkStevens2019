@@ -5,9 +5,9 @@ import AppComponent from '../../components/app'
 export const AppContext = createContext(null)
 
 const AppContainer = () => {
-  const [page, setPage] = useState('home')
+  const [page, setPage] = useState('examples')
   const [examplePage, setExamplePage] = useState(1)
-  const [showPop, setShowPop] = useState(0)
+  const [showPop, setShowPop] = useState(true)
 
   const changeExamplePage = index => setExamplePage(index + 1)
   const changePage = nextPage => setPage(nextPage)
