@@ -31,6 +31,10 @@
   flex-grow: 1;
 }
 
+.examples-control-button-spacer {
+  width: 20px;
+}
+
 .examples-control-show {
   display: flex;
   flex-direction: row;
@@ -38,8 +42,9 @@
 }
 
 .examples-control-center {
-  line-height: 100%;
-  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   text-align: center;
   width: 40%;
 }

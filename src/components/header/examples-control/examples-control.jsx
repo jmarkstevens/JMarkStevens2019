@@ -1,10 +1,8 @@
 import Button from '@material-ui/core/Button'
+import classNames from 'classnames'
 import React, { useContext } from 'react'
 
 import { AppContext } from '../../../containers/app'
-import PageIndicator from '../../common/PageIndicator'
-
-const pageNumber = 2
 
 const ExamplesControl = () => {
   const {
@@ -16,19 +14,43 @@ const ExamplesControl = () => {
   } = useContext(AppContext)
   const showInner = page === 'examples'
   const showPopText = showPop ? ' Hide Note' : 'Show Note'
-  const pageDesc = `Page ${examplePage} of ${pageNumber}`
+  const showBergstrom = examplePage === 1
+  const showCodeView = examplePage === 2
+  const BergstromClass = classNames(
+    'common-icon-button',
+    'page-buttons-button',
+    {
+      'page-buttons-button-selected': showBergstrom
+    }
+  )
+  const CodeViewClass = classNames(
+    'common-icon-button',
+    'page-buttons-button',
+    {
+      'page-buttons-button-selected': showCodeView
+    }
+  )
   return (
     <div className="examples-control">
       {showInner && (
         <div className="examples-control-show">
           <div className="examples-control-wings" />
           <div className="examples-control-center">
-            {pageDesc}
-            <PageIndicator
-              activeIndex={examplePage - 1}
-              count={pageNumber}
-              onClick={changeExamplePage}
-            />
+            <Button
+              className={BergstromClass}
+              disabled={showBergstrom}
+              onClick={() => changeExamplePage(1)}
+            >
+              Bergstrom Gardens
+            </Button>
+            <div className="examples-control-button-spacer" />
+            <Button
+              className={CodeViewClass}
+              disabled={showCodeView}
+              onClick={() => changeExamplePage(2)}
+            >
+              Code View
+            </Button>
           </div>
           <div className="examples-control-wings">
             <Button className="common-button" onClick={changeShowPop}>
