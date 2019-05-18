@@ -5,7 +5,7 @@ import AppComponent from '../../components/app'
 export const AppContext = createContext(null)
 
 const AppContainer = () => {
-  const [page, setPage] = useState('examples')
+  const [page, setPage] = useState('home')
   const [examplePage, setExamplePage] = useState(1)
   const [showPop, setShowPop] = useState(true)
 
