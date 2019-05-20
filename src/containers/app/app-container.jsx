@@ -6,7 +6,7 @@ export const AppContext = createContext(null)
 
 const AppContainer = () => {
   const [page, setPage] = useState('home')
-  const [examplePage, setExamplePage] = useState(1)
+  const [examplePage, setExamplePage] = useState(2)
   const [showPop, setShowPop] = useState(true)
 
   const changeExamplePage = index => setExamplePage(index)

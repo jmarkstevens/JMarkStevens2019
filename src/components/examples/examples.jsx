@@ -8,7 +8,7 @@ const testOrNot = useTest ? 'test.' : ''
 const urls = [
   'index placeholder',
   `http://${testOrNot}bergstromgardens.org`,
-  `http://${testOrNot}codeviewer.calitek.com`,
+  `http://${testOrNot}codeview.jmarkstevens.com`,
   `http://${testOrNot}palminfo.org`
 ]
 

@@ -12,7 +12,7 @@ const ExamplesControl = () => {
     page,
     showPop
   } = useContext(AppContext)
-  const showInner = page === 'examples'
+  const showInner = page === 'examples1'
   const showPopText = showPop ? ' Hide Note' : 'Show Note'
   const showBergstrom = examplePage === 1
   const showCodeView = examplePage === 2
@@ -37,19 +37,19 @@ const ExamplesControl = () => {
           <div className="examples-control-wings" />
           <div className="examples-control-center">
             <Button
-              className={BergstromClass}
-              disabled={showBergstrom}
-              onClick={() => changeExamplePage(1)}
-            >
-              Bergstrom Gardens
-            </Button>
-            <div className="examples-control-button-spacer" />
-            <Button
               className={CodeViewClass}
               disabled={showCodeView}
               onClick={() => changeExamplePage(2)}
             >
               Code View
+            </Button>
+            <div className="examples-control-button-spacer" />
+            <Button
+              className={BergstromClass}
+              disabled={showBergstrom}
+              onClick={() => changeExamplePage(1)}
+            >
+              Bergstrom Gardens
             </Button>
           </div>
           <div className="examples-control-wings">
