@@ -3,7 +3,7 @@ import React, { useContext } from 'react'
 import { AppContext } from '../../containers/app'
 import Notes from './notes'
 
-const useTest = true
+const useTest = false
 const testOrNot = useTest ? 'test.' : ''
 const urls = [
   'index placeholder',
