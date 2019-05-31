@@ -4,7 +4,7 @@ const favicon = require('serve-favicon')
 
 const path = require('path')
 
-const port = Number(process.env.JMSPORT || 8080)
+const port = Number(process.env.JMSPORT || 5400)
 
 const app = express()
 

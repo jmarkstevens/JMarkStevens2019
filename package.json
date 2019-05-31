@@ -5,7 +5,7 @@
   "author": "J Mark Stevens",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --config wp.config.js --mode development",
+    "start": "webpack-dev-server --config wp.config.js --mode development --port 5400",
     "build": "webpack --config wp.config.js --mode production",
     "server": "nodemon --watch dist js/server.js"
   },
