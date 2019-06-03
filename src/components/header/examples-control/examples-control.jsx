@@ -12,7 +12,7 @@ const ExamplesControl = () => {
     page,
     showPop
   } = useContext(AppContext)
-  const showInner = page === 'examples1'
+  const showInner = page === 'examples'
   const showPopText = showPop ? ' Hide Note' : 'Show Note'
   const showBergstrom = examplePage === 1
   const showCodeView = examplePage === 2
